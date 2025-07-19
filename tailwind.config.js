@@ -12,7 +12,7 @@ export default {
         Chonburi : ['Chonburi' , 'serif'],
       },
       backgroundImage: {
-        'hero': "url('./src/images/header/hero.png')", 
+          'hero': "url('/images/hero.png')", 
       }
     },
   },
