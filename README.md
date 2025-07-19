@@ -1,8 +1,25 @@
-# React + Vite
+# Cocktail Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cocktail Explorer is a modern web application built with React, Vite, and Tailwind CSS that allows users to discover a variety of alcoholic and non-alcoholic cocktails. The app fetches data from a free public REST API, providing detailed information about each cocktail, including ingredients, instructions, and images.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse a wide range of cocktails (both alcoholic and non-alcoholic).
+- Responsive design powered by Tailwind CSS for a seamless experience on all devices.
+- Smooth UI interactions.
+- Built with fast and optimized tooling: React + Vite.
+
+## Technologies Used
+
+- React
+- Vite
+- Tailwind CSS
+- Free public REST API for cocktail data
+
+## Getting Started
+
+Clone the repository and run the project locally:
+
+```bash
+npm install
+npm run dev
