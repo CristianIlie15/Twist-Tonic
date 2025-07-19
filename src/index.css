@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-is-open {
+    @apply h-[350px] p-6;
+}
+a {
+   @apply text-[20px]  transition-all duration-300;
+}
+.gradient-background {
+  background: rgb(50,185,178);
+  background: -moz-linear-gradient(180deg, rgba(50,185,178,1) 33%, rgba(226,122,34,1) 80%);
+  background: -webkit-linear-gradient(180deg, rgba(50,185,178,1) 33%, rgba(226,122,34,1) 80%);
+  background: linear-gradient(180deg, rgba(50,185,178,1) 33%, rgba(226,122,34,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32b9b2",endColorstr="#e27a22",GradientType=1);
+}
+
+.about-gradient {
+background: rgb(226,122,34);
+background: -moz-linear-gradient(180deg, rgba(226,122,34,1) 58%, rgba(227,223,219,1) 87%);
+background: -webkit-linear-gradient(180deg, rgba(226,122,34,1) 58%, rgba(227,223,219,1) 87%);
+background: linear-gradient(180deg, rgba(226,122,34,1) 58%, rgba(227,223,219,1) 87%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e27a22",endColorstr="#e3dfdb",GradientType=1);
+}
+
+.best-gradient {
+    background: rgb(227,223,219);
+background: -moz-linear-gradient(180deg, rgba(227,223,219,1) 21%, rgba(212,210,208,1) 87%);
+background: -webkit-linear-gradient(180deg, rgba(227,223,219,1) 21%, rgba(212,210,208,1) 87%);
+background: linear-gradient(180deg, rgba(227,223,219,1) 21%, rgba(212,210,208,1) 87%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3dfdb",endColorstr="#d4d2d0",GradientType=1);
+}
+  
+.action-gradient {
+    background: rgb(212,210,208);
+    background: -moz-linear-gradient(180deg, rgba(212,210,208,1) 10%, rgba(233,225,221,1) 81%);
+    background: -webkit-linear-gradient(180deg, rgba(212,210,208,1) 10%, rgba(233,225,221,1) 81%);
+    background: linear-gradient(180deg, rgba(212,210,208,1) 10%, rgba(233,225,221,1) 81%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d4d2d0",endColorstr="#e9e1dd",GradientType=1);
+}
+
+.crazyButton {
+    width: 165px;
+    height: 62px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    background: rgb(31, 14, 59);
+    transition: 0.1s;
+  }
+  
+  .crazyButton::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, #d97706 17.8%, #32B9B2 100.2% );
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .crazyButton:active {
+    transform: scale(0.9) rotate(3deg);
+    background: radial-gradient( circle farthest-corner at 10% 20%,  #d97706 17.8%, #32B9B2 100.2% );
+    transition: 0.5s;
+  }
+
+  .loader {
+    position: relative;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 0px;
+    animation: typewriter 2s steps(10)  infinite alternate , blink 0.5s steps(10) infinite;
+  }
+  
+  .loader-text {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(to right,#32B9B2, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes typewriter {
+    0% {
+      width: 0px;
+    }
+  
+    100% {
+      width: 240px;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      border-right-color: rgba(255,255,255,.75);
+      ;
+    }
+  
+    100% {
+      border-right-color: transparent;
+    }
+  }
