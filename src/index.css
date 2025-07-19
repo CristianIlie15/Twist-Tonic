@@ -49,7 +49,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3dfdb",endCo
     border-radius: 1rem;
     border: none;
     position: relative;
+<<<<<<< HEAD
     background: #1f0e3b;
+=======
+    background: rgb(31, 14, 59);
+>>>>>>> cbf2dfb (First push)
     transition: 0.1s;
   }
   
