@@ -25,7 +25,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e27a22",endCo
 }
 
 .best-gradient {
-    background: rgb(227,223,219);
+    background: #e3dfdb;
 background: -moz-linear-gradient(180deg, rgba(227,223,219,1) 21%, rgba(212,210,208,1) 87%);
 background: -webkit-linear-gradient(180deg, rgba(227,223,219,1) 21%, rgba(212,210,208,1) 87%);
 background: linear-gradient(180deg, rgba(227,223,219,1) 21%, rgba(212,210,208,1) 87%);
@@ -36,7 +36,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3dfdb",endCo
     background: rgb(212,210,208);
     background: -moz-linear-gradient(180deg, rgba(212,210,208,1) 10%, rgba(233,225,221,1) 81%);
     background: -webkit-linear-gradient(180deg, rgba(212,210,208,1) 10%, rgba(233,225,221,1) 81%);
-    background: linear-gradient(180deg, rgba(212,210,208,1) 10%, rgba(233,225,221,1) 81%);
+    background: linear-gradient(180deg, rgba(212,210,208,1) 10%, #e9e1dd 81%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d4d2d0",endColorstr="#e9e1dd",GradientType=1);
 }
 

@@ -3,7 +3,9 @@ import Header from './Header';
 import Nav from "./navbar";
 import Best from "./Best"
 import About from "./About";
-import Action from "./Action"
+import Action from "./Action";
+import Filler from "./Filler";
+
 const App = () => {
   return (
     <main className="bg-gray-100">
@@ -13,6 +15,7 @@ const App = () => {
         <Header />
         <About />
         <Best />
+        <Filler />
         <Action />
       </section>
     </main>

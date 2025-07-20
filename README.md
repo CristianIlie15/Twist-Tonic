@@ -1,6 +1,6 @@
-# Cocktail Explorer
+# Twist&Tonic
 
-Cocktail Explorer is a modern web application built with React, Vite, and Tailwind CSS that allows users to discover a variety of alcoholic and non-alcoholic cocktails. The app fetches data from a free public REST API, providing detailed information about each cocktail, including ingredients, instructions, and images.
+Twist&Tonic is a modern web application built with React, Vite, and Tailwind CSS that allows users to discover a variety of alcoholic and non-alcoholic cocktails. The app fetches data from a free public REST API, providing detailed information about each cocktail, including ingredients, instructions, and images.
 
 ## Features
 
