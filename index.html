@@ -3,15 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/images/cocktaill.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+
+    <!-- Preconnects pentru Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload + Async load combinat pentru toate fonturile -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Marcellus&family=Chonburi&display=swap"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Marcellus&family=Chonburi&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twist-Tonic</title>
   </head>

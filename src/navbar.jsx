@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from './images/navbar/loggo.png';
+import logo from './images/navbar/loggo.webp';
 import hamburgerButton from './images/navbar/burger-menu.png';
 import linkedIn from './images/navbar/lin.png';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import experience from './images/best/experience.png';
-import diversity from './images/best/diversity.png';
-import recipe from './images/best/recipe.png';
+import experience from './images/best/experience.webp';
+import diversity from './images/best/diversity.webp';
+import recipe from './images/best/recipe.webp';
 import Card from './Card';
 
 const Best = () => {

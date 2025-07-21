@@ -14,7 +14,7 @@ const Action = () => {
     const fetchUniqueCocktails = async (targetCount = 30) => {
       try {
         const uniqueCocktails = new Map();
-        const maxFetches = 50; // prevenim bucle infinite
+        const maxFetches = 50;
         let fetchesDone = 0;
 
         while (uniqueCocktails.size < targetCount && fetchesDone < maxFetches) {
@@ -49,7 +49,7 @@ const Action = () => {
 
   const getIngredients = (cocktail) => {
     const ingredients = [];
-    for (let i = 1; i <= 15; i++) { // am extins pana la 15 (cocktaildb poate avea pana la 15 ingrediente)
+    for (let i = 1; i <= 15; i++) { 
       const ingredient = cocktail[`strIngredient${i}`];
       const measure = cocktail[`strMeasure${i}`];
       if (ingredient) {
