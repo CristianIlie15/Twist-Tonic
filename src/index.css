@@ -16,6 +16,12 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32b9b2",endColorstr="#e27a22",GradientType=1);
 }
 
+.transition-max-height {
+  transition-property: max-height;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
 .about-gradient {
 background: rgb(226,122,34);
 background: -moz-linear-gradient(180deg, rgba(226,122,34,1) 58%, rgba(227,223,219,1) 87%);
