@@ -1,47 +1,55 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaCocktail, FaGlassMartiniAlt } from "react-icons/fa";
 
-const COCKTAIL_API_BASE =
-  "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+const COCKTAIL_API_BASE = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 const Action = () => {
   const [cocktailList, setCocktailList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const isMounted = useRef(true);
 
   useEffect(() => {
-    const fetchRandomCocktails = async () => {
-      const fetched = [];
-      let retries = 0;
-      const maxRetries = 30;
+    isMounted.current = true;
 
-      while (fetched.length < maxRetries && retries < maxRetries) {
-        try {
+    const fetchUniqueCocktails = async (targetCount = 30) => {
+      try {
+        const uniqueCocktails = new Map();
+        const maxFetches = 50; // prevenim bucle infinite
+        let fetchesDone = 0;
+
+        while (uniqueCocktails.size < targetCount && fetchesDone < maxFetches) {
           const response = await fetch(COCKTAIL_API_BASE);
           const data = await response.json();
           const cocktail = data?.drinks?.[0];
 
-          if (
-            cocktail &&
-            !fetched.some((c) => c.idDrink === cocktail.idDrink)
-          ) {
-            fetched.push(cocktail);
+          if (cocktail && !uniqueCocktails.has(cocktail.idDrink)) {
+            uniqueCocktails.set(cocktail.idDrink, cocktail);
           }
-        } catch (error) {
-          console.error("Error fetching cocktail:", error);
+          fetchesDone++;
         }
-        retries++;
-      }
 
-      setCocktailList(fetched);
-      setLoading(false);
+        if (isMounted.current) {
+          setCocktailList(Array.from(uniqueCocktails.values()));
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error("Error fetching cocktails:", error);
+        if (isMounted.current) {
+          setLoading(false);
+        }
+      }
     };
 
-    fetchRandomCocktails();
+    fetchUniqueCocktails();
+
+    return () => {
+      isMounted.current = false;
+    };
   }, []);
 
   const getIngredients = (cocktail) => {
     const ingredients = [];
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 15; i++) { // am extins pana la 15 (cocktaildb poate avea pana la 15 ingrediente)
       const ingredient = cocktail[`strIngredient${i}`];
       const measure = cocktail[`strMeasure${i}`];
       if (ingredient) {
@@ -117,6 +125,8 @@ const Action = () => {
                       src={cocktail.strDrinkThumb}
                       alt={cocktail.strDrink}
                       className="w-full h-48 object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
 
